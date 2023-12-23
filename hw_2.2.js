@@ -48,7 +48,7 @@ user.age = 34;
 delete user['city of residence'];
 //Exercise 9.4
 let info = prompt('Какую информацию хотите узнать о пользователе?');
-alert(user);
+alert(user[info]);;
 //Exercise 10
 let yourName = prompt('Как вас зовут?');
 alert(`Привет, ${yourName}!`);
