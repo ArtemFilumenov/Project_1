@@ -1,7 +1,8 @@
 //Exercise 1
 let a = 10;
 alert(a);
-alert(a * 2);
+a = 20;
+alert(a);
 //Exercise 2
 const firstIphoneYear = 2007;
 alert(`Первый iPhone был выпущен в ${firstIphoneYear} году`);
