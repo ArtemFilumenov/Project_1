@@ -41,6 +41,6 @@ console.log(num);
 
 //Exercise 6
 let friday = 3;
-for (let phonetic = friday; phonetic <= 31; phonetic +=7 ) {
-    console.log(`Сегодня пятница, ${phonetic}-е число. Необходимо подготовить отчет.`);
+for (let report = friday; report <= 31; report +=7 ) {
+    console.log(`Сегодня пятница, ${report}-е число. Необходимо подготовить отчет.`);
 }
