@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top {
+        height: 735px;
+        &_title {
+            padding-top: 238px;
+            font-size: 32px;
+            text-align: center;
+        }
+        &_text {
+            font-size: 14px;
+            text-align: center;
+            line-height: 22px;
+        }
+        &_text_mobile {
+            display: grid;
+            justify-items: center;
+        }
+        &_button {
+            margin-top: 32px;
+        }
+        &_button_mobile{
+            display: grid;
+            justify-items: center;
+        }
+    }
+
+    .catalog {
+        &_item {
+            width: 343px;
+        }
+        &_item_title {
+            padding-left: 16px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .top {
+        background-image: url(img/mobile/Rectangle\ 1.jpg);
+    }
+}

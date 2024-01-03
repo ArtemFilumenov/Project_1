@@ -1,113 +1,155 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-  
+
 .center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
-  
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .top {
-    height: 1024px;
-    background-image: url(img/Rectangle\ 1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  height: 1024px;
+  background-image: url(img/Rectangle\ 1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .top_title {
-    padding-top: 217px;
-    max-width: 788px;
-    color: #FFF;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  padding-top: 217px;
+  max-width: 788px;
+  color: #FFF;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .top_text {
-    max-width: 481px;
-    margin-top: 32px;
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 32px;
+  max-width: 481px;
+  margin-top: 32px;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
 }
 
 .top_text_big {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .top_button {
-    margin-top: 57px;
-    width: 234px;
-    height: 49px;
-    border: none;
-    border-radius: 30px;
-    background: #9C0332;
-    color: #FFF;
-    font-family: inherit;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  margin-top: 57px;
+  width: 234px;
+  height: 49px;
+  border: none;
+  border-radius: 30px;
+  background: #9C0332;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .top_button:hover {
-    background: #EB443F;
+  background: #EB443F;
 }
 
 .catalog {
-    padding-top: 128px;
-    padding-bottom: 128px;
-    background-color: #000915;
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background-color: #000915;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 .catalog_item {
-    width: 378px;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 18px;
-    box-sizing: border-box;
+  width: 378px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 18px;
+  box-sizing: border-box;
 }
 
 .catalog_item:hover {
-    border: 3px solid #44D2FF;
+  border: 3px solid #44D2FF;
 }
 
 .catalog_item_1 {
-    background-image: url(img/Rectangle\ 6.jpg);
+  background-image: url(img/Rectangle\ 6.jpg);
 }
 
 .catalog_item_2 {
-    background-image: url(img/Rectangle\ 7.jpg);
+  background-image: url(img/Rectangle\ 7.jpg);
 }
 
 .catalog_item_3 {
-    background-image: url(img/Rectangle\ 8.jpg);
+  background-image: url(img/Rectangle\ 8.jpg);
 }
 
 .catalog_item_title {
-    padding-top: 236px;
-    padding-left: 32px;
-    color: #FFF;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
+  padding-top: 236px;
+  padding-left: 32px;
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
 }
+
+@media (max-width: 768px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    height: 735px;
+  }
+  .top_title {
+    padding-top: 238px;
+    font-size: 32px;
+    text-align: center;
+  }
+  .top_text {
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+  }
+  .top_text_mobile {
+    display: grid;
+    justify-items: center;
+  }
+  .top_button {
+    margin-top: 32px;
+  }
+  .top_button_mobile {
+    display: grid;
+    justify-items: center;
+  }
+  .catalog_item {
+    width: 343px;
+  }
+  .catalog_item_title {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .top {
+    background-image: url(img/mobile/Rectangle\ 1.jpg);
+  }
+}/*# sourceMappingURL=style.css.map */

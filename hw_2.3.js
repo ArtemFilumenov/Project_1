@@ -27,4 +27,49 @@ if (d > 100 || e > 100) {
 //Exercise 4
 let a = '2';
 let b = '3';
-console.log(a + b);
+console.log(Number (a) + Number (b));
+
+//Exercise 5
+let month = prompt('Введите порядковый номер месяца');
+switch (month) {
+    case '1':
+        console.log('Январь - зимний месяц');
+        break;
+    case '2':
+        console.log('Февраль - зимний месяц');
+        break;
+    case '3':
+        console.log('Март - весенний месяц');
+        break;
+    case '4':
+        console.log('Апрель - весенний месяц');
+        break;
+    case '5':
+        console.log('Май - весенний месяц');
+        break;
+    case '6':
+        console.log('Июнь - летний месяц');
+        break;
+    case '7':
+        console.log('Июль - летний месяц');
+        break;
+    case '8':
+        console.log('Август - летний месяц');
+        break;
+    case '9':
+        console.log('Сентябрь - осенний месяц');
+        break;
+    case '10':
+        console.log('Октябрь - осенний месяц');
+        break;
+    case '11':
+        console.log('Ноябрь - осенний месяц');
+        break;
+    case '12':
+        console.log('Декабрь - зимний месяц');
+        break;
+    default:
+        console.log('Ввёл неверное значение');
+        break;
+}
+
