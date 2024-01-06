@@ -22,49 +22,48 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.top_title {
-    padding-top: 217px;
-    max-width: 788px;
-    color: #FFF;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.top_text {
-    max-width: 481px;
-    margin-top: 32px;
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 32px;
-}
-
-.top_text_big {
-    font-weight: 700;
-}
-
-.top_button {
-    margin-top: 57px;
-    width: 234px;
-    height: 49px;
-    border: none;
-    border-radius: 30px;
-    background: #9C0332;
-    color: #FFF;
-    font-family: inherit;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.top_button:hover {
-    background: #EB443F;
+    &_title {
+        padding-top: 217px;
+        max-width: 788px;
+        color: #FFF;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    
+    &_text {
+        max-width: 481px;
+        margin-top: 32px;
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+    }
+    
+    &_text_big {
+        font-weight: 700;
+    }
+    
+    &_button {
+        margin-top: 57px;
+        width: 234px;
+        height: 49px;
+        border: none;
+        border-radius: 30px;
+        background: #9C0332;
+        color: #FFF;
+        font-family: inherit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    &_button:hover {
+        background: #EB443F;
+    }
 }
 
 .catalog {
@@ -74,42 +73,91 @@ a {
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
+    &_item {
+        width: 378px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 18px;
+        box-sizing: border-box;
+    }
+    &_item:hover {
+        border: 3px solid #44D2FF;
+    }
+    &_item_1 {
+        background-image: url(img/Rectangle\ 6.jpg);
+    }
+    &_item_2 {
+        background-image: url(img/Rectangle\ 7.jpg);
+    }
+    &_item_3 {
+        background-image: url(img/Rectangle\ 8.jpg);
+    }
+    &_item_title {
+        padding-top: 236px;
+        padding-left: 32px;
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+    }
 }
 
-.catalog_item {
-    width: 378px;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 18px;
-    box-sizing: border-box;
+.game1 {
+    background: #000915;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 64px;
+    padding-top: 282px;
+    padding-bottom: 282px;
+    &_description {
+        max-width: 584px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &_title {
+        color: #FFF;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal; 
+    }
+    &_text {
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px; 
+    }
+    &_button {
+        width: 234px;
+        height: 49px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #9C0332;
+        border: none;
+        color: #FFF;
+        font-family: inherit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &_button:hover {
+        background: #EB443F;
+    }
+    &_img {
+        width: 485px;
+    }
 }
 
-.catalog_item:hover {
-    border: 3px solid #44D2FF;
+.guidance {
+    cursor: url(img/cursor.svg), auto;
 }
 
-.catalog_item_1 {
-    background-image: url(img/Rectangle\ 6.jpg);
-}
-
-.catalog_item_2 {
-    background-image: url(img/Rectangle\ 7.jpg);
-}
-
-.catalog_item_3 {
-    background-image: url(img/Rectangle\ 8.jpg);
-}
-
-.catalog_item_title {
-    padding-top: 236px;
-    padding-left: 32px;
-    color: #FFF;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
-}
 
 @import 'mobile';

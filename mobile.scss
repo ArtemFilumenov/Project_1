@@ -37,6 +37,25 @@
             padding-left: 16px;
         }
     }
+
+    .game1 {
+        padding-top: 51px;
+        padding-bottom: 85px;
+        &_description {
+        align-items: center;
+        }
+        &_title {
+            font-size: 32px;
+        }
+        &_text {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+        }
+        &_img {
+            width: 344px;
+        }
+    }
 }
 
 @media (max-width: 600px) {

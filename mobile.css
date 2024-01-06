@@ -33,6 +33,24 @@
   .catalog_item_title {
     padding-left: 16px;
   }
+  .game1 {
+    padding-top: 51px;
+    padding-bottom: 85px;
+  }
+  .game1_description {
+    align-items: center;
+  }
+  .game1_title {
+    font-size: 32px;
+  }
+  .game1_text {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .game1_img {
+    width: 344px;
+  }
 }
 @media (max-width: 600px) {
   .top {
