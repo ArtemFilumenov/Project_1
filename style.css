@@ -23,7 +23,6 @@ a {
   background-position: center;
   background-size: cover;
 }
-
 .top_title {
   padding-top: 217px;
   max-width: 788px;
@@ -33,7 +32,6 @@ a {
   font-weight: 700;
   line-height: normal;
 }
-
 .top_text {
   max-width: 481px;
   margin-top: 32px;
@@ -43,11 +41,9 @@ a {
   font-weight: 300;
   line-height: 32px;
 }
-
 .top_text_big {
   font-weight: 700;
 }
-
 .top_button {
   margin-top: 57px;
   width: 234px;
@@ -62,7 +58,6 @@ a {
   font-weight: 400;
   line-height: normal;
 }
-
 .top_button:hover {
   background: #EB443F;
 }
@@ -75,7 +70,6 @@ a {
   gap: 32px;
   flex-wrap: wrap;
 }
-
 .catalog_item {
   width: 378px;
   height: 300px;
@@ -85,23 +79,18 @@ a {
   border-radius: 18px;
   box-sizing: border-box;
 }
-
 .catalog_item:hover {
   border: 3px solid #44D2FF;
 }
-
 .catalog_item_1 {
   background-image: url(img/Rectangle\ 6.jpg);
 }
-
 .catalog_item_2 {
   background-image: url(img/Rectangle\ 7.jpg);
 }
-
 .catalog_item_3 {
   background-image: url(img/Rectangle\ 8.jpg);
 }
-
 .catalog_item_title {
   padding-top: 236px;
   padding-left: 32px;
@@ -110,6 +99,60 @@ a {
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
+}
+
+.game1 {
+  background: #000915;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 64px;
+  padding-top: 282px;
+  padding-bottom: 282px;
+}
+.game1_description {
+  max-width: 584px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.game1_title {
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.game1_text {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+.game1_button {
+  width: 234px;
+  height: 49px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #9C0332;
+  border: none;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.game1_button:hover {
+  background: #EB443F;
+}
+.game1_img {
+  width: 485px;
+}
+
+.guidance {
+  cursor: url(img/cursor.svg), auto;
 }
 
 @media (max-width: 768px) {
@@ -146,6 +189,24 @@ a {
   }
   .catalog_item_title {
     padding-left: 16px;
+  }
+  .game1 {
+    padding-top: 51px;
+    padding-bottom: 85px;
+  }
+  .game1_description {
+    align-items: center;
+  }
+  .game1_title {
+    font-size: 32px;
+  }
+  .game1_text {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .game1_img {
+    width: 344px;
   }
 }
 @media (max-width: 600px) {
