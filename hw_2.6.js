@@ -2,10 +2,10 @@
 const number = [1, 5, 4, 10, 0, 3];
 
 for (let i = 0; i < number.length; i++) {
-	if (number[i] === 10) break;
-
 	console.log(number[i]);
+	if (number[i] === 10) break;
 }
+
 
 //Exercise 2
 const numbers = [1, 5, 4, 10, 0, 3];
@@ -43,13 +43,25 @@ elements.pop();
 console.log(elements);
 
 //Exercise 7
-const myNum = [9, 8, 7, 6, 5];
-
-let userNum = +prompt('Введите число от 0 до 9');
-if (userNum = myNum.includes(userNum)){
-	alert('Угадал');
+const myNum = [9, 8, 7, 6, 5]; 
+let userNum = prompt('Введите число от 0 до 9'); 
+if (userNum === null) {    
+	alert('Вы отменили ввод'); 
 } else {
-	alert('Не угадал');
+	if (!userNum.trim()) {
+		alert('Строка пустая или состоит только из пробелов') 
+	} else {
+		let guessNumber = +userNum; 
+		if (isNaN(guessNumber)) {
+			alert('Вы ввели не число');
+		} else { 
+			  if (myNum.includes(guessNumber)) {
+				alert('Угадал'); 
+			  } else {
+				alert('Не угадал'); 
+			  }
+		} 
+	}
 }
 
 //Exercise 8
@@ -69,45 +81,50 @@ const bigMassiv = [
 console.log(bigMassiv.flat());
 
 //Exercise 10
-const numbers1 = [1, 3, 5, 0, 9, 7];
-let sum = 0;
-numbers1.forEach((element) => {
-sum += element;
-console.log(sum);
-});
+function coupleSum(arr) {
+	let result = [];
+	for (let i = 1; i < arr.length; i++) {
+		result.push(arr[i] + arr[i - 1]);
+	}
+	console.log(result);
+}
+coupleSum([1, 3, 5, 0, 9, 7]);
 
 //Exercise 11
-const perfectSquare = [9, 14, 21];
-
-perfectSquare.map((item) => {
-    result = item ** 2;
-    console.log(result);
-});
-
-//Exercise 12
-function stringLength() {
-	const getLength = el => el.map(str => str.length);
-
-	console.log(getLength(['space', 'sun', 'quazar']));
+function getSquare(arr) {
+	const result = [];
+	for (let i = 0; i < arr.length; i++) {
+		result.push(arr[i] ** 2);
+	}
+	return result;
 }
 
-stringLength();
+console.log(getSquare([9, 14, 21]));
+
+//Exercise 12
+function stringLength(arr) {
+	const result = [];
+	for (let i = 0; i < arr.length; i++) {
+		result.push(arr[i].length);
+	}
+	console.log(result);
+}
+stringLength(['space', 'sun', 'quazar']);
 
 //Exercise 13
 function filterPositive(array) {
-	const result = array.filter(num => num < 0);
+	const result = [];
+	result.push(array.filter(num => num < 0));
 	console.log(result);
 }
 
 filterPositive([-1, 0, 5, -10, 56]);
 filterPositive([-25, 25, 0, -1000, -2]);
 
-//Exercise 14
-	//const randomNum = Math.random(i =  0, i < 10, i++);
-	//const evenNumbers = randomNum.filter(el => (el * 10 % 2) == 0);
-	//console.log(evenNumbers);
-	//console.log(randomNum * 10);
+// // //Exercise 14
 
-//Exercise 15
+
+// // //Exercise 15
+
 
 
