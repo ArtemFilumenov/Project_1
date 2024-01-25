@@ -1,3 +1,19 @@
+@media (max-width: 1132px) {
+    .rowall {
+        display: flex;
+        flex-flow: wrap;
+    }
+    .col1, .col2 { 
+        width: auto;
+    }
+    .col1 {
+        order: 1;
+    }
+    .col2 {
+        order: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .center {
         padding-left: 16px;

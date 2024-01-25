@@ -12,3 +12,33 @@ function seasons() {
         alert('Вы ввели неккоректное значение');
     }
 }
+
+function rememberWords() {
+    let fruits = [' Яблоко', ' Груша', ' Дыня', ' Виноград', ' Персик', ' Апельсин', ' Мандарин'];
+    let fruit = fruits.sort(() => Math.random() - 0.5);
+    alert(fruit);
+    let oneQuestion = " " + prompt('Чему равнялся первый элемент массива?');
+    if (oneQuestion === " " + null) {    
+        alert ('Вы отменили ввод');
+    } else {
+        let twoQuestion = " " + prompt('Чему равнялся последний элемент массива?');
+        if (twoQuestion === " " + null) {    
+            alert ('Вы отменили ввод');
+        } else {
+            if (!oneQuestion.trim() || !twoQuestion.trim()) {
+                alert ('Строка пустая или состоит только из пробелов');
+            } else {
+                if (oneQuestion.toLowerCase() === fruit[0].toLowerCase() && twoQuestion.toLowerCase() !== fruit[6].toLowerCase() || oneQuestion.toLowerCase() !== fruit[0].toLowerCase() && twoQuestion.toLowerCase() === fruit[6].toLowerCase() ) {
+                    alert ('Вы были близки к победе!')
+                } else {
+                    if (oneQuestion.toLowerCase() === fruit[0].toLowerCase() && twoQuestion.toLowerCase() === fruit[6].toLowerCase()) {
+                        alert ('Угадал');
+                         } else {
+                            alert ('Не угадал');
+                        }
+                }
+            }
+        }
+    }
+
+}
