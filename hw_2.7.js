@@ -5,8 +5,7 @@ console.log(str.toUpperCase());
 
 //Exercise 2
 function searchStart(arr, str) {
-    const result = arr.filter(el => el.toLowerCase().includes(str.toLowerCase()));
-    return result;
+    return arr.filter(el => el.toLowerCase().startsWith(str.toLowerCase()));
 }
 
 console.log(searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко')); 
@@ -20,12 +19,11 @@ console.log(Math.ceil(math));
 console.log(Math.round(math));
 
 //Exercise 4
-console.log(Math.min(52, 53, 49, 77, 21, 32));
-console.log(Math.max(52, 53, 49, 77, 21, 32));
+
 
 //Exercise 5
 function randomNum() {
-    const result = Math.round(Math.random() * 10);
+    const result = Math.ceil(Math.random() * 10);
     return result;
 }
 
@@ -56,61 +54,53 @@ console.log(currentDates);
 
 //Exercise 9
 let currentDate = new Date();
-let after73days = +currentDate + (73 * 24 * 60 * 60 * 1000);
-console.log(new Date(after73days));
+currentDate.setDate(currentDate.getDate() + 73);
+console.log(new Date(currentDate));
 
 //Exercise 10
 function getDate() {
     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
     let myDate = new Date();
-    let fullDate = "Дата: " + myDate.getDate() + " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + " - это" + " " + days[myDate.getDay()] + "\nВремя: " + myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds();
-    let hour = myDate.getHours();
-    let minute = myDate.getMinutes();
-    let second = myDate.getSeconds();
-    if (hour < 10) {
-        hour = "0" + hour;
-    }
-    if (minute < 10) {
-        minute = "0" + minute;
-    }
-    if (second < 10) {
-        second = "0" + second;
-    }
+    let fullDate = "Дата: " + myDate.getDate() + " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + " - это" + " " + days[myDate.getDay()] + "\nВремя: " + new Date().toLocaleTimeString();
+
     return fullDate;
 }
 
 console.log(getDate());
 
 // //Exercise 11
-// function rememberWords() {
-//     let fruits = [' Яблоко', ' Груша', ' Дыня', ' Виноград', ' Персик', ' Апельсин', ' Мандарин'];
-//     let fruit = fruits.sort(() => Math.random() - 0.5);
-//     alert(fruit);
-//     let oneQuestion = " " + prompt('Чему равнялся первый элемент массива?');
-//     if (oneQuestion === " " + null) {    
-//         alert ('Вы отменили ввод');
-//     } else {
-//         let twoQuestion = " " + prompt('Чему равнялся последний элемент массива?');
-//         if (twoQuestion === " " + null) {    
-//             alert ('Вы отменили ввод');
-//         } else {
-//             if (!oneQuestion.trim() || !twoQuestion.trim()) {
-//                 alert ('Строка пустая или состоит только из пробелов');
-//             } else {
-//                 if (oneQuestion.toLowerCase() === fruit[0].toLowerCase() && twoQuestion.toLowerCase() !== fruit[6].toLowerCase() || oneQuestion.toLowerCase() !== fruit[0].toLowerCase() && twoQuestion.toLowerCase() === fruit[6].toLowerCase() ) {
-//                     alert ('Вы были близки к победе!')
-//                 } else {
-//                     if (oneQuestion.toLowerCase() === fruit[0].toLowerCase() && twoQuestion.toLowerCase() === fruit[6].toLowerCase()) {
-//                         alert ('Угадал');
-//                          } else {
-//                             alert ('Не угадал');
-//                         }
-//                 }
-//             }
-//         }
-//     }
-
-// }
-
-// rememberWords();
+function rememberWords() {
+    let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    let fruit = fruits.sort(() => Math.random() - 0.5);
+    alert(fruit.join(' '));
+    
+    let oneQuestion = prompt('Чему равнялся первый элемент массива?');
+    
+    if (oneQuestion === null) {    
+        alert ('Вы отменили ввод');
+        return;
+    }
+     
+    let twoQuestion = prompt('Чему равнялся последний элемент массива?');
+    
+    if (twoQuestion === null) {    
+      alert ('Вы отменили ввод');
+      return;
+    }
+    
+    if (!oneQuestion.trim() || !twoQuestion.trim()) {
+      alert ('Строка пустая или состоит только из пробелов');
+      return;
+    }
+    
+    if (oneQuestion.toLowerCase() === fruits[0].toLowerCase() && twoQuestion.toLowerCase() === fruits[fruits.length - 1].toLowerCase()) {
+        alert("Поздравляем! Вы угадали оба слова.");
+    } else if (oneQuestion.toLowerCase() === fruits[0].toLowerCase() || twoQuestion.toLowerCase() === fruits[fruits.length - 1].toLowerCase()) {
+        alert("Вы были близки к победе!");
+    } else {
+        alert("Вы не угадали ни одного слова.");
+    }
+  } 
+  
+  rememberWords();
