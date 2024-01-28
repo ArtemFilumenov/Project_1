@@ -6,15 +6,7 @@ const people = [
     { name: 'Оксана', age: 47 }
 ];
 
-console.log(people.sort(function sortAge(a, b) {
-    if (a.age > b.age) {
-        return 1;
-    }
-    if (a.age < b.age) {
-        return -1;
-    }
-    return 0;  
-}));
+console.log(people.sort((a, b) => a.age - b.age));
 //При разборе спросить про sortName
 
 //Exercise 2
@@ -55,7 +47,7 @@ const timeNow = (second) => {
 
     setTimeout(() => {
         clearInterval(interval);
-        console.log('30 секунд прошло!')
+        console.log(`${second} секунд прошло!`)
     }, second * 1000)
 };
 
