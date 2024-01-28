@@ -23,7 +23,7 @@ console.log(Math.round(math));
 
 //Exercise 5
 function randomNum() {
-    const result = Math.ceil(Math.random() * 10);
+    const result = Math.round(Math.random() * 9 + 1);
     return result;
 }
 
@@ -69,38 +69,38 @@ function getDate() {
 
 console.log(getDate());
 
-// //Exercise 11
-function rememberWords() {
-    let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
-    let fruit = fruits.sort(() => Math.random() - 0.5);
-    alert(fruit.join(' '));
+// // //Exercise 11
+// function rememberWords() {
+//     let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+//     let fruit = fruits.sort(() => Math.random() - 0.5);
+//     alert(fruit.join(' '));
     
-    let oneQuestion = prompt('Чему равнялся первый элемент массива?');
+//     let oneQuestion = prompt('Чему равнялся первый элемент массива?');
     
-    if (oneQuestion === null) {    
-        alert ('Вы отменили ввод');
-        return;
-    }
+//     if (oneQuestion === null) {    
+//         alert ('Вы отменили ввод');
+//         return;
+//     }
      
-    let twoQuestion = prompt('Чему равнялся последний элемент массива?');
+//     let twoQuestion = prompt('Чему равнялся последний элемент массива?');
     
-    if (twoQuestion === null) {    
-      alert ('Вы отменили ввод');
-      return;
-    }
+//     if (twoQuestion === null) {    
+//       alert ('Вы отменили ввод');
+//       return;
+//     }
     
-    if (!oneQuestion.trim() || !twoQuestion.trim()) {
-      alert ('Строка пустая или состоит только из пробелов');
-      return;
-    }
+//     if (!oneQuestion.trim() || !twoQuestion.trim()) {
+//       alert ('Строка пустая или состоит только из пробелов');
+//       return;
+//     }
     
-    if (oneQuestion.toLowerCase() === fruits[0].toLowerCase() && twoQuestion.toLowerCase() === fruits[fruits.length - 1].toLowerCase()) {
-        alert("Поздравляем! Вы угадали оба слова.");
-    } else if (oneQuestion.toLowerCase() === fruits[0].toLowerCase() || twoQuestion.toLowerCase() === fruits[fruits.length - 1].toLowerCase()) {
-        alert("Вы были близки к победе!");
-    } else {
-        alert("Вы не угадали ни одного слова.");
-    }
-  } 
+//     if (oneQuestion.toLowerCase() === fruits[0].toLowerCase() && twoQuestion.toLowerCase() === fruits[fruits.length - 1].toLowerCase()) {
+//         alert("Поздравляем! Вы угадали оба слова.");
+//     } else if (oneQuestion.toLowerCase() === fruits[0].toLowerCase() || twoQuestion.toLowerCase() === fruits[fruits.length - 1].toLowerCase()) {
+//         alert("Вы были близки к победе!");
+//     } else {
+//         alert("Вы не угадали ни одного слова.");
+//     }
+//   } 
   
-  rememberWords();
+//   rememberWords();
