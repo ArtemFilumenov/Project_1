@@ -113,13 +113,11 @@ stringLength(['space', 'sun', 'quazar']);
 
 //Exercise 13
 function filterPositive(array) {
-	const result = [];
-	result.push(array.filter(num => num < 0));
-	console.log(result);
+	return array.filter(num => num < 0);
 }
 
-filterPositive([-1, 0, 5, -10, 56]);
-filterPositive([-25, 25, 0, -1000, -2]);
+console.log(filterPositive([-1, 0, 5, -10, 56]));
+console.log(filterPositive([-25, 25, 0, -1000, -2]));
 
 // // //Exercise 14
 
